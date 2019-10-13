@@ -1,36 +1,61 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyDAlab9BnsyOOMiKOcSlcgvuPDwE9ppc2Y",
+    authDomain: "foodservice-5eda5.firebaseapp.com",
+    databaseURL: "https://foodservice-5eda5.firebaseio.com",
+    projectId: "foodservice-5eda5",
+    storageBucket: "foodservice-5eda5.appspot.com",
+    messagingSenderId: "526310084175",
+    appId: "1:526310084175:web:6a7000ed289e0fb38de43a"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
 document.addEventListener('init', function(event) {
     var page = event.target;
-    console.log(page.id);
 
-    if (page.id === "tabbar") {
-        //Code for tabbar
+
+    if (page.id === 'homePage') {
+        console.log("homePage");
+
         $("#menubtn").click(function() {
-            var menu = document.getElementById('menu');
-            menu.open();
+            $("#sidemenu")[0].open();
+        });
+
+        $("#carousel").empty();
+        db.collection("recommended").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+              <div class="thumbnail" style="background-image: url('${doc.data().photoUrl}')">
+              </div>
+              <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().name}</div>
+          </ons-carousel-item>`
+                $("#carousel").append(item);
+            });
         });
     }
 
-    if (page.id === "sidemenu") {
-        //Code for sidemenu
-        $("#homebtn").click(function() {
-            var content = document.getElementById('content');
-            var menu = document.getElementById('menu');
-            content.load('tabbar.html')
-                .then(menu.close.bind(menu));
+    if (page.id === 'menuPage') {
+        console.log("menuPage");
+
+        $("#login").click(function() {
+            $("#content")[0].load("login.html");
+            $("#sidemenu")[0].close();
         });
-        $("#loginbtn").click(function() {
-            var content = document.getElementById('content');
-            var menu = document.getElementById('menu');
-            content.load('login.html')
-                .then(menu.close.bind(menu));
+
+        $("#home").click(function() {
+            $("#content")[0].load("home.html");
+            $("#sidemenu")[0].close();
         });
     }
 
-    if (page.id === 'tab1') {
-        //Code for Tab 1
-        $("#btn1").click(function() {
-            ons.notification.alert("Hello");
+    if (page.id === 'loginPage') {
+        console.log("loginPage");
+
+        $("#backhomebtn").click(function() {
+            $("#content")[0].load("home.html");
         });
     }
-
 });
