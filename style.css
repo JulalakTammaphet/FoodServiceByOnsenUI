@@ -9,10 +9,25 @@
 }
 
 .thumbnail {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     display: table;
     background-color: rgba(0, 0, 0, 0.42);
+    background-size: 120%;
+}
+
+.thumbnail1 {
+    width: 345px;
+    height: 200px;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.42);
+    background-size: 100%;
+}
+
+.recomended_item_title1 {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .recomended_list {
@@ -20,8 +35,9 @@
 }
 
 .recomended {
-    background-color: white;
-    padding-top: 60px;
+    background-color: rgb(253, 171, 253);
+    padding-top: 30px;
+    height: 40%
 }
 
 .menu_list {
