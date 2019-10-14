@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <ons-page>
+    <ons-page id="FoodCategorypage">
         <ons-toolbar>
             <div class="left">
                 <ons-toolbar-button>
@@ -30,125 +30,155 @@
             </div>
         </ons-toolbar>
         <br>
+        <div class="content" style="text-align: center;">
+            <center>
+                <input type="search" value="" placeholder="Search" class="search-input" style="width: 800px;">
+            </center>
 
-        <center>
-            <input type="search" value="" placeholder="Search" class="search-input" style="width: 800px;">
-        </center>
+
+            <div class="recomended">
+                <ons-row class="row justify-content-center">
+                    <ons-card style="width: 100%;">
+                        <br>
+                        <p style="text-align: center"><b>Recomeded</b></p>
+                        <br>
+                        <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px" class="recomended_list" id="carousel">
+                            <ons-carousel-item modifier="nodivider" id="itemrim01" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B9%80%E0%B8%89%E0%B8%B2%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B8%A1%E0%B8%B0%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%A1%E0%B8%AA%E0%B8%94%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87.jpg?alt=media&token=9e0182e8-8393-402d-887f-9e04fd28aa8d')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">เฉาก๋วยมะท่วงนมสด</div>
+                                <div class="recomended_item_title" id="item1_price">120</div>
+                                <div class="recomended_item_title" id="item1_resturantname">ริมทาง @ ฉลอง</div>
+                            </ons-carousel-item>
+                            <ons-carousel-item modifier="nodivider" id="itemwan02" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99.jpg?alt=media&token=df561cd9-b659-4d86-a397-dcdc994a3be9')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">ทับทิมกรอบ</div>
+                                <div class="recomended_item_title" id="item1_price">35</div>
+                                <div class="recomended_item_title" id="item1_resturantname">หวานละมุน</div>
+                            </ons-carousel-item>
+                            <ons-carousel-item modifier="nodivider" id="itemINK03" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B8%8A%E0%B8%B9%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99MR.INK.jpg?alt=media&token=a275ebf0-218c-43df-83ed-7179a08a078f')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">ชานมบราวน์ชูการ์</div>
+                                <div class="recomended_item_title" id="item1_price">25</div>
+                                <div class="recomended_item_title" id="item1_resturantname">MR.INK Bubble Milk Tea</div>
+                            </ons-carousel-item>
+                            <ons-carousel-item modifier="nodivider" id="itemCha04" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%8A%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99.jpg?alt=media&token=77ff813b-229a-45a7-b194-e11f0872666b')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">ชาคอน</div>
+                                <div class="recomended_item_title" id="item1_price">20</div>
+                                <div class="recomended_item_title" id="item1_resturantname">อัยย๊ะชาคอน</div>
+                            </ons-carousel-item>
+                            <ons-carousel-item modifier="nodivider" id="itemnood05" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%94%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B4%E0%B8%95%E0%B8%95%E0%B8%B4.jpg?alt=media&token=d7cbcefc-75b2-47a6-a3cc-b2bbb39ddfac')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">ก๋วยเตี๋ยวบะหมี่น้ำเป็ดพะโล้</div>
+                                <div class="recomended_item_title" id="item1_price">50</div>
+                                <div class="recomended_item_title" id="item1_resturantname">กิตติก๋วยเตี๋ยวเป็ด</div>
+                            </ons-carousel-item>
+                            <ons-carousel-item modifier="nodivider" id="itemcoben06" class="recomended_item">
+                                <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%95%E0%B9%89%E0%B8%A1%E0%B9%80%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%81%E0%B9%80%E0%B8%9A%E0%B8%99%E0%B8%8B%E0%B9%8C.jpg?alt=media&token=16fb24ae-2329-479e-8b9c-e982eb068846')">
+                                </div>
+                                <div class="recomended_item_title" id="item1_foodname">ข้าวต้มเเห้งธรรมดา</div>
+                                <div class="recomended_item_title" id="item1_price">50</div>
+                                <div class="recomended_item_title" id="item1_resturantname">โกเบ๊นซ์ ข้าวต้มภูเก็ต</div>
+                            </ons-carousel-item>
 
 
-        <div class="recomended">
-            <h4>Recomended</h4>
-            <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px" class="recomended_list" id="carousel">
-                <ons-carousel-item modifier="nodivider" id="itemrim01" class="recomended_item">
-                    <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B9%80%E0%B8%89%E0%B8%B2%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B8%A1%E0%B8%B0%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%A1%E0%B8%AA%E0%B8%94%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87.jpg?alt=media&token=9e0182e8-8393-402d-887f-9e04fd28aa8d')">
-                    </div>
-                    <div class="recomended_item_title" id="item1_foodname">เฉาก๋วยมะท่วงนมสด</div>
-                    <div class="recomended_item_title" id="item1_price">120</div>
-                    <div class="recomended_item_title" id="item1_resturantname">ริมทาง @ ฉลอง</div>
-                </ons-carousel-item>
-                <ons-carousel-item modifier="nodivider" id="itemwan02" class="recomended_item">
-                    <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99.jpg?alt=media&token=df561cd9-b659-4d86-a397-dcdc994a3be9')">
-                    </div>
-                    <div class="recomended_item_title" id="item1_foodname">ทับทิมกรอบ</div>
-                    <div class="recomended_item_title" id="item1_price">35</div>
-                    <div class="recomended_item_title" id="item1_resturantname">หวานละมุน</div>
-                </ons-carousel-item>
-                <ons-carousel-item modifier="nodivider" id="itemINK03" class="recomended_item">
-                    <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B8%8A%E0%B8%B9%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99MR.INK.jpg?alt=media&token=a275ebf0-218c-43df-83ed-7179a08a078f')">
-                    </div>
-                    <div class="recomended_item_title" id="item1_foodname">ชานมบราวน์ชูการ์</div>
-                    <div class="recomended_item_title" id="item1_price">25</div>
-                    <div class="recomended_item_title" id="item1_resturantname">MR.INK Bubble Milk Tea</div>
-                </ons-carousel-item>
-            </ons-carousel>
+                        </ons-carousel>
+                    </ons-card>
+                </ons-row>
+            </div>
+
+
+            <br>
+            <p style="text-align: center"><b>Restaurants Category</b></p>
+            <br>
+
+            <ons-row class="row justify-content-center">
+                <ons-col class="col-3" width="25%"></ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%;">
+                        <img src="img foodService/category/Beverage.jpg" style="width: 100%; ">
+                        <div class="title" style="text-align: center">
+                            Beverage
+                        </div>
+                    </ons-card>
+                </ons-col>
+                <!-- <ons-col class="col-6" width="25%"></ons-col> -->
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Sweet.jpg" style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Sweet
+                        </div>
+                    </ons-card>
+                </ons-col>
+                <ons-col width="25%"></ons-col>
+            </ons-row>
+
+            <ons-row class="row justify-content-center">
+                <ons-col class="col-3" width="25%"></ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Seafood.jpg " style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Sea Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Thaifood.jfif" style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Thai Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+            </ons-row>
+
+            <ons-row class="row justify-content-center">
+                <ons-col class="col-3" width="25%"></ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Chainesefood.jpg " style="width: 100%;  ">
+                        <div class="title" style="text-align: center">
+                            Chainese Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Japanesefood.jpg" style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Japanese Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+            </ons-row>
+
+            <ons-row class="row justify-content-center">
+                <ons-col class="col-3" width="25%"></ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Vietnamfood.jpg" style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Vietnam Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+                <ons-col width="25%">
+                    <ons-card style="width: 100%">
+                        <img src="img foodService/category/Fastfood.jpg" style="width: 100%">
+                        <div class="title" style="text-align: center">
+                            Fast Food
+                        </div>
+                    </ons-card>
+                </ons-col>
+            </ons-row>
         </div>
-
-        <br>
-        <p style="text-align: center"><b>Restaurants Category</b></p>
-        <br>
-
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%;">
-                    <img src="img foodService/category/Beverage.jpg" style="width: 100%; ">
-                    <div class="title" style="text-align: center">
-                        Beverage
-                    </div>
-                </ons-card>
-            </ons-col>
-            <!-- <ons-col class="col-6" width="25%"></ons-col> -->
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Sweet.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Sweet
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%"></ons-col>
-        </ons-row>
-
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Seafood.jpg " style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Sea Food
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Thaifood.jfif" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Thai Food
-                    </div>
-                </ons-card>
-            </ons-col>
-        </ons-row>
-
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Chainesefood.jpg " style="width: 100%;  ">
-                    <div class="title" style="text-align: center">
-                        Chainese Food
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Japanesefood.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Japanese Food
-                    </div>
-                </ons-card>
-            </ons-col>
-        </ons-row>
-
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Vietnamfood.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Vietnam Food
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/category/Fastfood.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        Fast Food
-                    </div>
-                </ons-card>
-            </ons-col>
-        </ons-row>
-
 
 
     </ons-page>
