@@ -17,8 +17,8 @@ document.addEventListener('init', function(event) {
     var page = event.target;
 
 
-    if (page.id === 'homePage') {
-        console.log("homePage");
+    if (page.id === 'FoodCategorypage') {
+        console.log("FoodCategorypage");
 
         $("#menubtn").click(function() {
             $("#sidemenu")[0].open();
@@ -48,7 +48,7 @@ document.addEventListener('init', function(event) {
         });
 
         $("#home").click(function() {
-            $("#content")[0].load("home.html");
+            $("#content")[0].load("FoodCategory.html");
             $("#sidemenu")[0].close();
         });
     }
@@ -57,7 +57,7 @@ document.addEventListener('init', function(event) {
         console.log("loginPage");
 
         $("#backhomebtn").click(function() {
-            $("#content")[0].load("home.html");
+            $("#content")[0].load("FoodCategory.html");
         });
     }
 });
