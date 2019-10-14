@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Food Service</title>
 
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
@@ -13,15 +15,15 @@
 <body>
 
     <!-- First navigation component: Navigator. This will remain always on top of the app. -->
-    <ons-navigator id="myNavigator" page="login1.html">
+    <ons-navigator swippeable id="myNavigator" page="login.html">
     </ons-navigator>
 
 
     <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
-
+    <template id="login.html">
     <ons-page id="index">
         <ons-splitter>
-            <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+            <ons-splitter-side id="menu" side="left" width="250px" collapse swippeable>
                 <ons-page>
                     <ons-list>
                         <ons-list-item onclick="fn.load('FoodCaregory.html')" teppable>
@@ -30,14 +32,21 @@
                         <ons-list-item onclick="fn.load('OrderConfirmation.html')" teppable>
                             Your Oeder
                         </ons-list-item>
+                        <ons-list-item onclick="fn.load('login1.html')" teppable>
+                            Logout
+                        </ons-list-item>
                     </ons-list>
                 </ons-page>
 
             </ons-splitter-side>
-            <ons-splitter-content page="FoodCategory" id="content">
+            <ons-splitter-content page="FoodCategory.html" id="content">
             </ons-splitter-content>
         </ons-splitter>
     </ons-page>
+</template>
+
+
+
 
 
     <script>
