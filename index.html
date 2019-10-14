@@ -18,16 +18,30 @@
 
 
     <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
-    <template id="login1.html">
+    <template id="loginPage">
     <ons-page>
-      <ons-splitter id="mySplitter">
-        <ons-splitter-side id="sidemenu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+      <ons-splitter id="login">
+        <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
         </ons-splitter-side>
         <ons-splitter-content page="FoodCategory.html" id="content">
         </ons-splitter-content>
       </ons-splitter>
     </ons-page>
   </template>
+
+    <script>
+        fn = {};
+        fn.open = function() {
+            var menu = document.getElementById('menu');
+            menu.open();
+        };
+        fn.load = function(page) {
+            var content = document.getElementById('content');
+            var menu = document.getElementById('menu');
+            content.load(page)
+                .then(menu.close.bind(menu));
+        };
+    </script>
 
     <script src="lib/onsen/js/onsenui.js"></script>
     <script src="lib/jquery/jquery-3.4.1.min.js"></script>
