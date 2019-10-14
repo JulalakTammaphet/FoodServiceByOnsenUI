@@ -39,8 +39,8 @@ document.addEventListener('init', function(event) {
         });
     }
 
-    if (page.id === 'menuPage') {
-        console.log("menuPage");
+    if (page.id === 'loginPage') {
+        console.log("loginPage");
 
         $("#login").click(function() {
             $("#content")[0].load("login.html");

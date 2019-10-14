@@ -18,27 +18,27 @@
 
 
     <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
-    <template id="loginPage">
-    <ons-page id="login">
-      <ons-splitter >
-        <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
-          <ons-page>
-            <ons-list>
-              <ons-list-item onclick="fn.load('FoodCaregory.html')" teppable>
-                Home
-              </ons-list-item>
-              <ons-list-item onclick="fn.load('OrderConfirmation.html')" teppable>
-                Your Oeder
-              </ons-list-item>
-            </ons-list>
-          </ons-page>
 
-        </ons-splitter-side>
-        <ons-splitter-content page="FoodCategory.html" id="content">
-        </ons-splitter-content>
-      </ons-splitter>
+    <ons-page id="index">
+        <ons-splitter>
+            <ons-splitter-side id="menu" page="menu.html" swipeable width="250px" collapse swipe-target-width="50px">
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item onclick="fn.load('FoodCaregory.html')" teppable>
+                            Home
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('OrderConfirmation.html')" teppable>
+                            Your Oeder
+                        </ons-list-item>
+                    </ons-list>
+                </ons-page>
+
+            </ons-splitter-side>
+            <ons-splitter-content page="FoodCategory" id="content">
+            </ons-splitter-content>
+        </ons-splitter>
     </ons-page>
-  </template>
+
 
     <script>
         fn = {};
