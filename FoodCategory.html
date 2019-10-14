@@ -2,7 +2,7 @@
     <ons-toolbar>
         <div class="left">
             <ons-toolbar-button>
-                <ons-icon icon="md-menu"></ons-icon>
+                <ons-icon icon="md-menu" onclick="fn.open()"></ons-icon>
             </ons-toolbar-button>
         </div>
         <div class="center">FOOD SERVICE</div>
@@ -27,32 +27,32 @@
                     <p style="text-align: center"><b>Recomeded</b></p>
                     <br>
                     <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px" class="recomended_list" id="carousel">
-                        <ons-carousel-item modifier="nodivider" id="itemrim01" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="rim01" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B9%80%E0%B8%89%E0%B8%B2%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B8%A1%E0%B8%B0%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%A1%E0%B8%AA%E0%B8%94%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87.jpg?alt=media&token=9e0182e8-8393-402d-887f-9e04fd28aa8d')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">ริมทาง @ ฉลอง</div>
                         </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="itemwan02" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="wan02" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99.jpg?alt=media&token=df561cd9-b659-4d86-a397-dcdc994a3be9')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">หวานละมุน</div>
                         </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="itemINK03" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="INK03" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B8%8A%E0%B8%B9%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99MR.INK.jpg?alt=media&token=a275ebf0-218c-43df-83ed-7179a08a078f')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">MR.INK Bubble Milk Tea</div>
                         </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="itemCha04" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="Cha04" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%8A%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99.jpg?alt=media&token=77ff813b-229a-45a7-b194-e11f0872666b')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">อัยย๊ะชาคอน</div>
                         </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="itemnood05" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="nood05" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%94%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B4%E0%B8%95%E0%B8%95%E0%B8%B4.jpg?alt=media&token=d7cbcefc-75b2-47a6-a3cc-b2bbb39ddfac')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">กิตติก๋วยเตี๋ยวเป็ด</div>
                         </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="itemcoben06" class="recomended_item">
+                        <ons-carousel-item modifier="nodivider" id="coben06" class="recomended_item">
                             <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/recommeded%2F%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%95%E0%B9%89%E0%B8%A1%E0%B9%80%E0%B9%80%E0%B8%AB%E0%B9%89%E0%B8%87%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%81%E0%B9%80%E0%B8%9A%E0%B8%99%E0%B8%8B%E0%B9%8C.jpg?alt=media&token=16fb24ae-2329-479e-8b9c-e982eb068846')">
                             </div>
                             <div class="recomended_item_title" id="item1_resturantname">โกเบ๊นซ์ ข้าวต้มภูเก็ต</div>
