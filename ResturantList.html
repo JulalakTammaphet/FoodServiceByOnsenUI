@@ -1,107 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button>
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">FOOD SERVICE</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="md-home"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <br>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RestaurantList</title>
+    <center>
+        <input type="search" value="" placeholder="Search" class="search-input" style="width: 800px;">
+    </center>
 
-    <script src="lib/onsen/js/onsenui.js"></script>
-    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-    <script src="./js/app.js"></script>
-    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-</head>
+    <br>
+    <p style="text-align: center"><b>Restaurants List</b></p>
+    <br>
 
-<body>
-    <ons-page>
-        <ons-toolbar>
-            <div class="left">
-                <ons-toolbar-button>
-                    <ons-icon icon="md-menu"></ons-icon>
-                </ons-toolbar-button>
-            </div>
-            <div class="center">FOOD SERVICE</div>
-            <div class="right">
-                <ons-toolbar-button>
-                    <ons-icon icon="md-home"></ons-icon>
-                </ons-toolbar-button>
-            </div>
-        </ons-toolbar>
-        <br>
+    <ons-row class="row justify-content-center">
+        <ons-col class="col-3" width="25%"></ons-col>
+        <ons-col width="25%">
+            <ons-card style="width: 100%">
+                <img src="img foodService/resturantlist/Sweet/ริมทาง.jpg" style="width: 100%;  ">
+                <div class="title" style="text-align: center">
+                    ริมทาง @ ฉลอง
+                </div>
+            </ons-card>
+        </ons-col>
+        <ons-col width="25%">
+            <ons-card style="width: 100%">
+                <img src="img foodService/resturantlist/Sweet/หวานละมุน.jpg" style="width: 100%">
+                <div class="title" style="text-align: center">
+                    หวานละมุน
+                </div>
+            </ons-card>
+        </ons-col>
+    </ons-row>
 
-        <center>
-            <input type="search" value="" placeholder="Search" class="search-input" style="width: 800px;">
-        </center>
+    <ons-row class="row justify-content-center">
+        <ons-col class="col-3" width="25%"></ons-col>
+        <ons-col width="25%">
+            <ons-card style="width: 100%;">
+                <img src="img foodService/resturantlist/Beverage/อัยย๊ะชาคอน.jpg" style="width: 100%; ">
+                <div class="title" style="text-align: center">
+                    อัยย๊ะ ชาคอน
+                </div>
 
-        <br>
-        <p style="text-align: center"><b>Restaurants List</b></p>
-        <br>
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%;">
-                    <img src="img foodService/resturantlist/Beverage/อัยย๊ะชาคอน.jpg" style="width: 100%; ">
-                    <div class="title" style="text-align: center">
-                        อัยย๊ะ ชาคอน
-                    </div>
+            </ons-card>
+        </ons-col>
+        <!-- <ons-col class="col-6" width="25%"></ons-col> -->
+        <ons-col width="25%">
+            <ons-card style="width: 100%">
+                <img src="img foodService/resturantlist/Beverage/MR.INK.jpg" style="width: 100%">
+                <div class="title" style="text-align: center">
+                    MR.INK
+                </div>
+            </ons-card>
+        </ons-col>
+        <ons-col width="25%"></ons-col>
+    </ons-row>
 
-                </ons-card>
-            </ons-col>
-            <!-- <ons-col class="col-6" width="25%"></ons-col> -->
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/resturantlist/Beverage/MR.INK.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        MR.INK
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%"></ons-col>
-        </ons-row>
+    <ons-row class="row justify-content-center">
+        <ons-col class="col-3" width="25%"></ons-col>
+        <ons-col width="25%">
+            <ons-card style="width: 100%">
+                <img src="img foodService/resturantlist/Seafood/ป่าหล่าย.jpg" style="width: 100%">
+                <div class="title" style="text-align: center">
+                    ป่าหล่าย ซีฟู้ด
+                </div>
+            </ons-card>
+        </ons-col>
+        <ons-col width="25%">
+            <ons-card style="width: 100%">
+                <img src="img foodService/resturantlist/Seafood/ศาลาลอย.jpg" style="width: 100%">
+                <div class="title" style="text-align: center">
+                    ศาลาลอย ซีฟู้ด
+                </div>
+            </ons-card>
+        </ons-col>
+    </ons-row>
 
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/resturantlist/Seafood/ป่าหล่าย.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        ป่าหล่าย ซีฟู้ด
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/resturantlist/Seafood/ศาลาลอย.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        ศาลาลอย ซีฟู้ด
-                    </div>
-                </ons-card>
-            </ons-col>
-        </ons-row>
 
-        <ons-row class="row justify-content-center">
-            <ons-col class="col-3" width="25%"></ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/resturantlist/Sweet/ริมทาง.jpg" style="width: 100%;  ">
-                    <div class="title" style="text-align: center">
-                        ริมทาง @ ฉลอง
-                    </div>
-                </ons-card>
-            </ons-col>
-            <ons-col width="25%">
-                <ons-card style="width: 100%">
-                    <img src="img foodService/resturantlist/Sweet/หวานละมุน.jpg" style="width: 100%">
-                    <div class="title" style="text-align: center">
-                        หวานละมุน
-                    </div>
-                </ons-card>
-            </ons-col>
-        </ons-row>
 
-    </ons-page>
-</body>
-
-</html>
+</ons-page>
