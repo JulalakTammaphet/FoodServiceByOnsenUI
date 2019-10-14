@@ -1,17 +1,17 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDAlab9BnsyOOMiKOcSlcgvuPDwE9ppc2Y",
+    apiKey: "AIzaSyDli-NgsCNF9Yf4XrnEh-xWpYJ1K9Nn8vE",
     authDomain: "foodservice-5eda5.firebaseapp.com",
     databaseURL: "https://foodservice-5eda5.firebaseio.com",
     projectId: "foodservice-5eda5",
     storageBucket: "foodservice-5eda5.appspot.com",
-    messagingSenderId: "526310084175",
-    appId: "1:526310084175:web:6a7000ed289e0fb38de43a"
+    messagingSenderId: "176284206523",
+    appId: "1:176284206523:web:ae50c5ad2a6166bfbb709e",
+    measurementId: "G-Y4HQSTZWF1"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-var db = firebase.firestore();
+firebase.analytics();
 
 document.addEventListener('init', function(event) {
     var page = event.target;
