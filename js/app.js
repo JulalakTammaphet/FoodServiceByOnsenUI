@@ -38,6 +38,50 @@ document.addEventListener('init', function(event) {
         });
     }
 
+    if (page.id === 'ResturantListpage') {
+        console.log("ResturantListpage");
+
+        $("#menubtn").click(function() {
+            $("#sidemenu")[0].open();
+        });
+
+        $("#carousel").empty();
+        db.collection("recommended").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+              <div class="thumbnail" style="background-image: url('${doc.data().image}')">
+              </div>
+              
+              <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().resturantname}</div>
+          </ons-carousel-item>`
+                $("#carousel").append(item);
+            });
+        });
+    }
+
+    if (page.id === 'ResturantMenupage') {
+        console.log("ResturantMenupage");
+
+        $("#menubtn").click(function() {
+            $("#sidemenu")[0].open();
+        });
+
+        $("#carousel").empty();
+        db.collection("recommended").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+              <div class="thumbnail" style="background-image: url('${doc.data().image}')">
+              </div>
+              
+            
+          </ons-carousel-item>`
+                $("#carousel").append(item);
+            });
+        });
+    }
+
+
+
     if (page.id === 'loginPage') {
         console.log("loginPage");
 
