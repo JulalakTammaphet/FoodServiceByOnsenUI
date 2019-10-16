@@ -14,115 +14,68 @@
     </ons-toolbar>
     <br>
 
-    <center>
-        <input type="search" value="" placeholder="Search" class="search-input" style="width: 800px;">
-    </center>
 
-    <br>
-    <p style="text-align: center"><b>Restaurants List</b></p>
-    <br>
+    <div class="content" style="text-align: center;">
+        <div>
+            <p style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+                <ons-search-input placeholder="Food or Restuarant">
+                </ons-search-input>
+            </p>
+        </div>
 
-    <ons-row class="row justify-content-center">
-        <ons-col class="col-3" width="25%"></ons-col>
-        <ons-col width="25%">
-            <ons-card style="width: 100%">
-                <ons-carousel-item modifier="nodivider " id="itemrl4 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87.jpg?alt=media&token=61eb038b-a9a7-452b-ae84-0df323df46f8') ">
+        <div class="category_content">
+            <h4 style="margin-top: 0px">Restaurants List</h4>
+            <ons-row class="category">
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B2%E0%B8%87.jpg?alt=media&token=61eb038b-a9a7-452b-ae84-0df323df46f8')">
+                        <figure class="category_thumbnail">
+                            <div class="recomended_item_title1" id="item1_resturantname ">ริมทาง @ ฉลอง</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">ริมทาง @ ฉลอง</div>
-                </ons-carousel-item>
-
-
-                <!-- <img src="img foodService/resturantlist/Sweet/ริมทาง.jpg" style="width: 100%;  ">
-                <div class="title" style="text-align: center">
-                    ริมทาง @ ฉลอง
-                </div> -->
-            </ons-card>
-        </ons-col>
-        <ons-col width="25%">
-            <ons-card style="width: 100%">
-
-                <ons-carousel-item modifier="nodivider " id="itemrl3 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99.jpg?alt=media&token=60f548cf-087f-4ac3-9438-27c817ec3e0f') ">
+                </ons-col>
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%99.jpg?alt=media&token=60f548cf-087f-4ac3-9438-27c817ec3e0f')">
+                        <figure class="category_thumbnail">
+                            <div class="category_title " id="item1_category ">หวานละมุน</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">หวานละมุน</div>
-                </ons-carousel-item>
-
-                <!-- <img src="img foodService/resturantlist/Sweet/หวานละมุน.jpg" style="width: 100%">
-                <div class="title" style="text-align: center">
-                    หวานละมุน
-                </div> -->
-            </ons-card>
-        </ons-col>
-    </ons-row>
-
-    <ons-row class="row justify-content-center">
-        <ons-col class="col-3" width="25%"></ons-col>
-        <ons-col width="25%">
-            <ons-card style="width: 100%;">
-                <ons-carousel-item modifier="nodivider " id="itemrl1 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%AD%E0%B8%B1%E0%B8%A2%E0%B8%A2%E0%B9%8A%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99.jpg?alt=media&token=4600948c-4582-4716-abc9-c27b028b2d2f') ">
+                </ons-col>
+            </ons-row>
+            <ons-row class="category">
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%AD%E0%B8%B1%E0%B8%A2%E0%B8%A2%E0%B9%8A%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%99.jpg?alt=media&token=4600948c-4582-4716-abc9-c27b028b2d2f')">
+                        <figure class="category_thumbnail">
+                            <div class="category_title " id="item1_category ">อัยย๊ะ ชาคอน</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">อัยย๊ะ ชาคอน</div>
-                </ons-carousel-item>
-                <!-- <img src="img foodService/resturantlist/Beverage/อัยย๊ะชาคอน.jpg" style="width: 100%; ">
-                <div class="title" style="text-align: center">
-                    อัยย๊ะ ชาคอน
-                </div> -->
-
-            </ons-card>
-        </ons-col>
-        <!-- <ons-col class="col-6" width="25%"></ons-col> -->
-        <ons-col width="25%">
-            <ons-card style="width: 100%">
-
-                <ons-carousel-item modifier="nodivider " id="itemrl2 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2FMR.INK.jpg?alt=media&token=c2452689-8513-48b5-9379-c99a2fa74462') ">
+                </ons-col>
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2FMR.INK.jpg?alt=media&token=c2452689-8513-48b5-9379-c99a2fa74462')">
+                        <figure class="category_thumbnail">
+                            <div class="category_title " id="item1_category ">MR.INK</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">MR.INK</div>
-                </ons-carousel-item>
-
-                <!-- <img src="img foodService/resturantlist/Beverage/MR.INK.jpg" style="width: 100%">
-                <div class="title" style="text-align: center">
-                    MR.INK
-                </div> -->
-            </ons-card>
-        </ons-col>
-        <ons-col width="25%"></ons-col>
-    </ons-row>
-
-    <ons-row class="row justify-content-center">
-        <ons-col class="col-3" width="25%"></ons-col>
-        <ons-col width="25%">
-            <ons-card style="width: 100%">
-
-                <ons-carousel-item modifier="nodivider " id="itemrl5 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%A2.jpg?alt=media&token=3607ecda-692d-4787-ad83-83071db42b55') ">
+                </ons-col>
+            </ons-row>
+            <ons-row class="category">
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%A2.jpg?alt=media&token=3607ecda-692d-4787-ad83-83071db42b55')">
+                        <figure class="category_thumbnail">
+                            <div class="category_title " id="item1_category ">ป่าหล่าย ซีฟู้ด</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">ป่าหล่าย ซีฟู้ด</div>
-                </ons-carousel-item>
-
-                <!-- <img src="img foodService/resturantlist/Seafood/ป่าหล่าย.jpg" style="width: 100%">
-                <div class="title" style="text-align: center">
-                    ป่าหล่าย ซีฟู้ด
-                </div> -->
-            </ons-card>
-        </ons-col>
-        <ons-col width="25%">
-            <ons-card style="width: 100%">
-                <ons-carousel-item modifier="nodivider " id="itemrl6 " class="recomended_item ">
-                    <div class="thumbnail1 " style="background-image: url( 'https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%A2.jpg?alt=media&token=6a5b0ab9-6943-4e50-80b7-91f10f52cc02') ">
+                </ons-col>
+                <ons-col modifier="nodivider">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/resturantlist%2F%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%A2.jpg?alt=media&token=6a5b0ab9-6943-4e50-80b7-91f10f52cc02')">
+                        <figure class="category_thumbnail">
+                            <div class="category_title " id="item1_category ">ศาลาลอย ซีฟู้ด</div>
+                        </figure>
                     </div>
-                    <div class="recomended_item_title1" id="item1_resturantname ">ศาลาลอย ซีฟู้ด</div>
-                </ons-carousel-item>
-                <!-- <img src="img foodService/resturantlist/Seafood/ศาลาลอย.jpg" style="width: 100%">
-                <div class="title" style="text-align: center">
-                    ศาลาลอย ซีฟู้ด
-                </div> -->
-            </ons-card>
-        </ons-col>
-    </ons-row>
+                </ons-col>
+            </ons-row>
 
+        </div>
 
+    </div>
 
 </ons-page>
