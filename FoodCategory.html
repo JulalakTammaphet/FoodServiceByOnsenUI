@@ -1,29 +1,15 @@
 <ons-page id="FoodCategorypage">
-    <!-- <ons-toolbar>
-        <div class="left">
-            <ons-toolbar-button>
-                <ons-icon icon="md-menu" onclick="fn.open()"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-        <div class="center">FOOD SERVICE</div>
-        <div class="right">
-            <ons-toolbar-button>
-                <ons-icon icon="md-home"></ons-icon>
-            </ons-toolbar-button>
-        </div>
-    </ons-toolbar>
-    <br> -->
+
     <ons-toolbar>
         <div class="left">
-            <!-- Toolbar-button with different icons depending on the platform. -->
             <ons-toolbar-button id="menubtn">
-                <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px"></ons-icon>
+                <ons-icon icon="md-menu" onclick="fn.open()"></ons-icon>
             </ons-toolbar-button>
         </div>
         <div class="center">Food Service</div>
         <div class="right">
             <ons-toolbar-button>
-                <ons-icon icon="fa-user-circle" onclick="fn.open()"></ons-icon>
+                <ons-icon icon="fa-user-circle" onclick="fn.load('setting.html')"></ons-icon>
             </ons-toolbar-button>
         </div>
     </ons-toolbar>
@@ -31,7 +17,7 @@
 
     <div class="content" style="text-align: center;">
         <div>
-            <p style="text-align: center; margin-top: 70px; margin-bottom: 10px;">
+            <p style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
                 <ons-search-input placeholder="Food or Restuarant">
                 </ons-search-input>
             </p>
@@ -85,14 +71,14 @@
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FSweet.jpg?alt=media&token=ec7d1476-7306-4079-a65a-bc235b5be4db')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1" id="item1_category ">Sweet</div>
+                            <div class="category_title" id="item1_category ">Sweet</div>
                         </figure>
                     </div>
                 </ons-col>
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FBeverage.jpg?alt=media&token=e89b6e51-9f67-4719-9eb4-3c4f60714f90')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Beverage</div>
+                            <div class="category_title " id="item1_category ">Beverage</div>
                         </figure>
                     </div>
                 </ons-col>
@@ -101,14 +87,14 @@
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FFastfood.jpg?alt=media&token=0450b160-2a0e-4195-990f-daed11fc9b44')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Fastfood</div>
+                            <div class="category_title " id="item1_category ">Fastfood</div>
                         </figure>
                     </div>
                 </ons-col>
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FJapanesefood.jpg?alt=media&token=b6449e39-e15f-411f-9163-9d6277a27652')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Japanesefood</div>
+                            <div class="category_title " id="item1_category ">Japanesefood</div>
                         </figure>
                     </div>
                 </ons-col>
@@ -117,14 +103,14 @@
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FSeafood.jpg?alt=media&token=311d7f76-62bb-4da8-8804-7e78386391ff')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Seafood</div>
+                            <div class="category_title " id="item1_category ">Seafood</div>
                         </figure>
                     </div>
                 </ons-col>
                 <ons-col modifier="nodivider">
-                    <div class="category_wrapper" style="background-image: url('images/category6.png')">
+                    <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FChainesefood.jpg?alt=media&token=b24a2e7f-836f-4e8f-857c-b73c5445ad73')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Chainesefood</div>
+                            <div class="category_title " id="item1_category ">Chainesefood</div>
                         </figure>
                     </div>
                 </ons-col>
@@ -133,14 +119,14 @@
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FVietnamfood.jpg?alt=media&token=05f84baa-d35c-4025-ae20-066f69036517')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Vietnamfood</div>
+                            <div class="category_title " id="item1_category ">Vietnamfood</div>
                         </figure>
                     </div>
                 </ons-col>
                 <ons-col modifier="nodivider">
                     <div class="category_wrapper" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/foodservice-5eda5.appspot.com/o/category%2FThaifood.jfif?alt=media&token=d9805650-d543-4039-bef1-b307be0c9abb')">
                         <figure class="category_thumbnail">
-                            <div class="recomended_item_title1 " id="item1_category ">Thaifood</div>
+                            <div class="category_title " id="item1_category ">Thaifood</div>
                         </figure>
                     </div>
                 </ons-col>
