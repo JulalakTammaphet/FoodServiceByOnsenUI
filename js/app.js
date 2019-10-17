@@ -17,25 +17,42 @@ document.addEventListener('init', function(event) {
     var page = event.target;
 
 
-    if (page.id === 'FoodCategorypage') {
-        console.log("FoodCategorypage");
-
-        $("#menubtn").click(function() {
-            $("#sidemenu")[0].open("FoodCategory.html");
-        });
-
-        $("#carousel").empty();
-        db.collection("recommended").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
-              <div class="thumbnail" style="background-image: url('${doc.data().image}')">
-              </div>
-              
-              <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().resturantname}</div>
-          </ons-carousel-item>`
-                $("#carousel").append(item);
+    if (page.id === 'loginpage') {
+        function signIn() {
+            var email = document.getElementById('emailRegis').value;
+            var password = document.getElementById('passwordRegis').value;
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
             });
-        });
+            alert('logged in');
+        }
+    }
+
+
+
+
+    if (page.id === 'Regispage') {
+        function signUp() {
+            var email = document.getElementById('emailRegis').value;
+            var password = document.getElementById('passwordRegis').value;
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/weak-password') {
+                    alert('The password is too weak');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            });
+        }
     }
 
 
