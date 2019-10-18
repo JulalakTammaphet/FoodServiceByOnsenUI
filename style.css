@@ -57,7 +57,7 @@
     width: 255px;
     height: 200px;
     margin: auto;
-    background-color: gold;
+    background-color: rgb(250, 179, 226);
 }
 
 .category_wrapper ons-icon {
@@ -80,4 +80,22 @@
 
 .contentsearch {
     background-color: rgb(248, 161, 219);
+}
+
+body {
+    padding-top: 80px;
+}
+
+.show-cart li {
+    display: flex;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    align-self: center;
 }
