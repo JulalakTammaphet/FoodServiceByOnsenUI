@@ -11,28 +11,39 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
+var db = firebase.firestore();
 
 document.addEventListener('init', function(event) {
     var page = event.target;
+    //codepalm
+    if (page.id === 'signup') {
+        console.log("signup");
 
+        $("#signupbtn").click(function() {
 
-    if (page.id === 'loginpage') {
-        function signIn() {
-            var email = document.getElementById('emailRegis').value;
-            var password = document.getElementById('passwordRegis').value;
-            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+                // Handle Errors here.
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                if (errorCode === 'auth/wrong-password') {
-                    alert('Wrong password');
+
+                if (errorCode === 'auth/weak-password') {
+                    alert('The password is too weak');
+
                 } else {
                     alert(errorMessage);
+                    content.load('login.html');
                 }
                 console.log(error);
+
             });
-            alert('logged in');
-        }
+
+
+        });
+
+
     }
 
     if (page.id === 'loginPage') {
@@ -58,9 +69,47 @@ document.addEventListener('init', function(event) {
             });
         });
 
+        $("#signinbtn").click(function() {
+            var email = $("#email").val();
+            var password = $("#password").val();
+            firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+                content.load('home.html');
+
+            })
+
+            .catch(function(error) {
+
+                console.log(error.message);
+            });
+
+
+
+        });
+
+
+
     }
 
 
+    //codeตัวเอง
+
+    if (page.id === 'loginpage') {
+        function signIn() {
+            var email = document.getElementById('emailRegis').value;
+            var password = document.getElementById('passwordRegis').value;
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            });
+            alert('logged in');
+        }
+    }
 
 
     if (page.id === 'Regispage') {
@@ -81,7 +130,7 @@ document.addEventListener('init', function(event) {
     }
 
 
-
+    //codeAj
 
 
     if (page.id === 'loginPage') {
@@ -108,212 +157,33 @@ document.addEventListener('init', function(event) {
 });
 
 
-// ************************************************
-// Food Cart API
-// ************************************************
-// if (page.id === 'ResturantMenupage') {
-var foodCart = (function() {
-    // =============================
-    // Private methods and propeties
-    // =============================
-    cart = [];
+if (page.id === 'FoodCategoryPage') {
+    console.log("FoodCategoryPage");
 
-    // Constructor
-    function Item(name, price, count) {
-        this.name = name;
-        this.price = price;
-        this.count = count;
-    }
+    $("#Sweetbtn").click(function() {
+        localStorage.setItem("resturantlist", "Category", "Sweet");
+        $("#content")[0].load("ResturantList.html");
+    });
 
-    // Save cart
-    function saveCart() {
-        sessionStorage.setItem('foodCart', JSON.stringify(cart));
-    }
-
-    // Load cart
-    function loadCart() {
-        cart = JSON.parse(sessionStorage.getItem('foodCart'));
-    }
-    if (sessionStorage.getItem("foodCart") != null) {
-        loadCart();
-    }
+    $("#Beveragebtn").click(function() {
+        localStorage.setItem("resturantlist", "Category");
+        $("#content")[0].load("ResturantList.html");
+    });
 
 
-    // =============================
-    // Public methods and propeties
-    // =============================
-    var obj = {};
+    $("#menubtn").click(function() {
+        $("#sidemenu")[0].open();
+    });
 
-    // Add to cart
-    obj.addItemToCart = function(name, price, count) {
-            for (var item in cart) {
-                if (cart[item].name === name) {
-                    cart[item].count++;
-                    saveCart();
-                    return;
-                }
-            }
-            var item = new Item(name, price, count);
-            cart.push(item);
-            saveCart();
-        }
-        // Set count from item
-    obj.setCountForItem = function(name, count) {
-        for (var i in cart) {
-            if (cart[i].name === name) {
-                cart[i].count = count;
-                break;
-            }
-        }
-    };
-    // Remove item from cart
-    obj.removeItemFromCart = function(name) {
-        for (var item in cart) {
-            if (cart[item].name === name) {
-                cart[item].count--;
-                if (cart[item].count === 0) {
-                    cart.splice(item, 1);
-                }
-                break;
-            }
-        }
-        saveCart();
-    }
-
-    // Remove all items from cart
-    obj.removeItemFromCartAll = function(name) {
-        for (var item in cart) {
-            if (cart[item].name === name) {
-                cart.splice(item, 1);
-                break;
-            }
-        }
-        saveCart();
-    }
-
-    // Clear cart
-    obj.clearCart = function() {
-        cart = [];
-        saveCart();
-    }
-
-    // Count cart 
-    obj.totalCount = function() {
-        var totalCount = 0;
-        for (var item in cart) {
-            totalCount += cart[item].count;
-        }
-        return totalCount;
-    }
-
-    // Total cart
-    obj.totalCart = function() {
-        var totalCart = 0;
-        for (var item in cart) {
-            totalCart += cart[item].price * cart[item].count;
-        }
-        return Number(totalCart.toFixed(2));
-    }
-
-    // List cart
-    obj.listCart = function() {
-        var cartCopy = [];
-        for (i in cart) {
-            item = cart[i];
-            itemCopy = {};
-            for (p in item) {
-                itemCopy[p] = item[p];
-
-            }
-            itemCopy.total = Number(item.price * item.count).toFixed(2);
-            cartCopy.push(itemCopy)
-        }
-        return cartCopy;
-    }
-
-    // cart : Array
-    // Item : Object/Class
-    // addItemToCart : Function
-    // removeItemFromCart : Function
-    // removeItemFromCartAll : Function
-    // clearCart : Function
-    // countCart : Function
-    // totalCart : Function
-    // listCart : Function
-    // saveCart : Function
-    // loadCart : Function
-    return obj;
-})();
-
-
-// *****************************************
-// Triggers / Events
-// ***************************************** 
-// Add item
-$('.add-to-cart').click(function(event) {
-    event.preventDefault();
-    var name = $(this).data('name');
-    var price = Number($(this).data('price'));
-    foodCart.addItemToCart(name, price, 1);
-    displayCart();
-});
-
-// Clear items
-$('.clear-cart').click(function() {
-    foodCart.clearCart();
-    displayCart();
-});
-
-
-function displayCart() {
-    var cartArray = foodCart.listCart();
-    var output = "";
-    for (var i in cartArray) {
-        output += "<tr>" +
-            "<td>" + cartArray[i].name + "</td>" +
-            "<td>(" + cartArray[i].price + ")</td>" +
-            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
-            "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
-            "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
-            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
-            " = " +
-            "<td>" + cartArray[i].total + "</td>" +
-            "</tr>";
-    }
-    $('.show-cart').html(output);
-    $('.total-cart').html(foodCart.totalCart());
-    $('.total-count').html(foodCart.totalCount());
+    $("#carousel").empty();
+    db.collection("recommended").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+            <div class="thumbnail" style="background-image: url('${doc.data().photoUrl}')">
+            </div>
+            <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().name}</div>
+        </ons-carousel-item>`
+            $("#carousel").append(item);
+        });
+    });
 }
-
-// Delete item button
-
-$('.show-cart').on("click", ".delete-item", function(event) {
-    var name = $(this).data('name')
-    foodCart.removeItemFromCartAll(name);
-    displayCart();
-})
-
-
-// -1
-$('.show-cart').on("click", ".minus-item", function(event) {
-        var name = $(this).data('name')
-        foodCart.removeItemFromCart(name);
-        displayCart();
-    })
-    // +1
-$('.show-cart').on("click", ".plus-item", function(event) {
-    var name = $(this).data('name')
-    foodCart.addItemToCart(name);
-    displayCart();
-})
-
-// Item count input
-$('.show-cart').on("change", ".item-count", function(event) {
-    var name = $(this).data('name');
-    var count = Number($(this).val());
-    foodCart.setCountForItem(name, count);
-    displayCart();
-});
-
-displayCart();
-// }

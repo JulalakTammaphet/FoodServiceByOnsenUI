@@ -2,13 +2,13 @@
     <ons-toolbar>
         <div class="left">
             <ons-toolbar-button>
-                <ons-icon icon="md-menu" onclick="fn.open()"></ons-icon>
+                <ons-icon icon="fa-arrow-left" onclick="fn.load('ResturantList.html')">Back</ons-icon>
             </ons-toolbar-button>
         </div>
         <div class="center">FOOD SERVICE</div>
         <div class="right">
             <ons-toolbar-button>
-                <ons-icon icon="md-home"></ons-icon>
+                <ons-icon icon="md-home" onclick="fn.load('FoodCategory.html')"></ons-icon>
             </ons-toolbar-button>
         </div>
     </ons-toolbar>
@@ -119,6 +119,30 @@
                     <p style="text-align:center;margin-top:40px;opacity:0.4;">ที่อยู่ร้าน : ตำบลฉลอง อำเภอเมือง จังหวัดภูเก็ต Tel 076-0374-911</p>
                     <br>
                 </div>
+
+                <!-- Modal
+                <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="show-cart table">
+
+                                </table>
+                                <div>Total price: ฿<span class="total-cart"></span></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Order now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
 
 
 
