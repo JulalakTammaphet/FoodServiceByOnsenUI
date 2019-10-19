@@ -13,13 +13,6 @@
         </div>
     </ons-toolbar>
 
-
-
-
-
-
-
-
     <ons-row class="row justify-content-center ">
         <ons-col class="col-2 " width="20% "></ons-col>
         <ons-col width="60% ">
@@ -43,31 +36,7 @@
             </ons-card>
         </ons-col>
 
-        <!-- Modal -->
-        <!-- <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table class="show-cart table">
 
-                        </table>
-                        <div>Total price: ฿<span class="total-cart"></span></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Order now</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- 
-    </ons-row> -->
         <ons-row class="row justify-content-center ">
             <ons-col class="col-3 " width="20% "></ons-col>
             <ons-col width="60% ">
@@ -96,86 +65,3 @@
         </div>
 
 </ons-page>
-<!-- <script>
-    var dataCart = [];
-
-    function add(add) {
-        localStorage.clear('quentinTarantino');
-        localStorage.setItem('quentinTarantino', add);
-        var retrievedData = localStorage.getItem("quentinTarantino");
-        console.log(retrievedData);
-        dataCart.push(retrievedData);
-
-        ons.notification.toast("เพิ่มสินค้าใส่ตะกร้า", {
-            timeout: 2000
-        });
-        $("#Fillbadge").attr('badge', dataCart.length);
-    }
-
-
-    function showAdd() {
-        $("#Fillbadge").attr('badge', '');
-
-        document.getElementById('pic').innerHTML = ""
-        console.log(dataCart);
-
-        var num = 0;
-        dataCart.forEach(function(dataCart) {
-            var apr = db.collection("PRODUCTS").where("pid", "==", dataCart);
-            apr.get().then(function(querySnapshot) {
-                console.log(querySnapshot.docs)
-                var pic_template = $('#pic_template').html();
-                var html = ejs.render(pic_template, {
-                    cart: querySnapshot.docs,
-                    num: num
-                });
-                console.log(html);
-
-
-
-                $('#pic').append(html);
-                num = num + 1;
-            })
-        })
-
-    }
-
-    function remove(i) {
-        console.log(i);
-
-        console.log(dataCart);
-
-        var remove = dataCart.splice(i, 1)
-
-        ons.notification.toast("สินค้าถูกลบเรียบร้อยเเล้ว", {
-            timeout: 2000
-        });
-        $("#Fillbadge").attr('badge', dataCart.length);
-
-        showAdd()
-
-    }
-    var price = 0;
-
-    function totalprice(priceadd) {
-        var priceadd = parseInt(priceadd, 10)
-        console.log(priceadd);
-
-        price = price + priceadd;
-        $('#showprice').html("<p><b>&nbsp; Total Price is : </b>" + price + " ฿</p>");
-
-    }
-
-    function removeprice(pricedel) {
-        var pricedel = parseInt(pricedel, 10)
-        console.log(pricedel);
-
-        price = price - pricedel;
-        if (price == 0) {
-            document.getElementById('showprice').innerHTML = ''
-        } else {
-            $('#showprice').html("<p><b>&nbsp; Total Price is : </b>" + price + " ฿</p>");
-        }
-
-    }
-</script> -->

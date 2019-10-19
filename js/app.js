@@ -157,8 +157,8 @@ document.addEventListener('init', function(event) {
 });
 
 
-if (page.id === 'FoodCategoryPage') {
-    console.log("FoodCategoryPage");
+if (page.id === 'ResturantlistPage') {
+    console.log("ResturantlistPage");
 
     $("#Sweetbtn").click(function() {
         localStorage.setItem("resturantlist", "Category", "Sweet");
