@@ -161,34 +161,38 @@ document.addEventListener('init', function(event) {
         console.log("FoodCategorypage");
 
         $("#Sweetbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            localStorage.setItem("selectedCategory", "Sweet");
+            $("#content")[0].load("category.html");
         });
 
         $("#Beveragebtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            localStorage.setItem("selectedCategory", "Beverage");
+            $("#content")[0].load("category.html");
         });
 
         $("#fastfoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            localStorage.setItem("selectedCategory", "Fastfood");
+            $("#content")[0].load("category.html");
         });
         $("#Japanesefoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            localStorage.setItem("selectedCategory", "Japanesefood");
+            $("#content")[0].load("category.html");
         });
 
         $("#Seafoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            $("#content")[0].load("category.html");
         });
 
         $("#Chainesefoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            $("#content")[0].load("category.html");
         });
 
         $("#Vietnamfoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            $("#content")[0].load("category.html");
         });
 
         $("#Thaifoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
+            $("#content")[0].load("category.html");
         });
         $("#menubtn").click(function() {
             $("#sidemenu")[0].open();
@@ -209,6 +213,38 @@ document.addEventListener('init', function(event) {
         });
     }
 
+
+    if (page.id === 'categoryPage') {
+        var category = localStorage.getItem("selectedCategory");
+        console.log("categoryPage:" + category);
+
+        $("#header").html(category);
+
+        $("#menubtn").click(function() {
+            $("#sidemenu")[0].open();
+        });
+
+        $("#list").empty();
+        db.collection("resturantlist").where("category", "==", category).get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var item = `<ons-row class="category">
+                <ons-col modifier="nodivider">
+                    <div class="category_header" style="background-image: url('${doc.data().image}')">
+                        <figure class="category_thumbnail" id="Sweetbtn">
+                            <div class="category_title" id="Category_1_name">${doc.data().resturantname}</div>
+                        </figure>
+                    </div>
+                </ons-col>
+         </ons-row>`
+                    $("#list").append(item);
+                    console.log(doc.data().resturantname);
+
+                });
+            });
+
+    }
+
     if (page.id === 'ResturantListpage') {
         console.log("ResturantListpage");
         //ฟังก์ชันหน้าResturantlist
@@ -216,6 +252,8 @@ document.addEventListener('init', function(event) {
             $("#content")[0].load("ResturantMenu.html");
         });
     }
+
+
     // ************************************************
     // Shopping Cart API
     // ************************************************
