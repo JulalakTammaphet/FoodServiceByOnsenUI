@@ -5,12 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="787093180720-2ak7j8aado3ue49o45a899tbgv3kkfda.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>Food Service</title>
 
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
     <link rel="stylesheet" href="style.css">
 
+
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+    <!-- <script>
+        function addtocart() {
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.addtocart1) {
+                    localStorage.addtocart1 = Number(localStorage.addtocart1) + 1;
+                } else {
+                    localStorage.addtocart1 = 1;
+                }
+                document.getElementById("result").innerHTML = "เพิ่มสินค้าใส่ตะกร้า " + localStorage.addtocart1 + "รายการ ";
+            } else {
+                document.getElementById("result").innerHTML = "คุณไม่มีสินค้าในตะกร้า";
+            }
+        }
+    </script> -->
 </head>
 
 <body>
@@ -66,18 +98,23 @@
         };
     </script>
 
-    <script src="lib/onsen/js/onsenui.js"></script>
-    <script src="lib/jquery/jquery-3.4.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
-    <script src="js/app.js"></script>
+    <script>
+        function onSignIn(userInfo) {
+            var result = '';
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
+            // Useful data for your client-side scripts:
+            var profile = userInfo.getBasicProfile();
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+            result += "ID: " + profile.getId() + "\n";
+            result += "Full Name:  " + profile.getName() + "\n";
+            result += "Given Name: " + profile.getGivenName() + "\n";
+            result += "Family Name: " + profile.getFamilyName() + "\n";
+            result += "Email: " + profile.getEmail() + "\n";
+            result += "ID Token: " + userInfo.getAuthResponse().id_token + "\n";
+
+            document.getElementById("result").value = result;
+        };
+    </script>
 
 
 </body>

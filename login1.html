@@ -26,7 +26,12 @@
                     <h4>Or sign in with</h4>
                     <ons-row>
                         <ons-col>
-                            <img src="img/ggsignin.png" id="gbtn" alt="Onsen UI" style="width: 30%">
+
+                            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+                                <img src="img/ggsignin.png" alt="Onsen UI" style="width: 30%">
+                                <!-- id="gbtn" -->
+                            </div>
+                            <br> Result: <textarea id="result"></textarea>
                         </ons-col>
                     </ons-row>
                     <ons-row>

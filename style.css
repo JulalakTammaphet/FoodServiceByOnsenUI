@@ -99,3 +99,11 @@ body {
     height: 200px;
     align-self: center;
 }
+
+.model {
+    background-color: white;
+}
+
+.ordernowbnt {
+    width: 99px;
+}
