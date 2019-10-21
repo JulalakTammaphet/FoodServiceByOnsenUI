@@ -1,0 +1,151 @@
+<ons-page id="ResturantMenupage">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-arrow-left" onclick="fn.load('ResturantList.html')">Back</ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">FOOD SERVICE</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="md-home" onclick="fn.load('FoodCategory.html')"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <ons-row class="row justify-content-center">
+
+        <ons-col>
+            <ons-card style="width: 99%">
+                <p style="text-align: left"><b>หวานละมุน</b></p>
+                <!-- Nav-->
+                <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+                    <div class="row">
+                        <div class="col">
+                            <ons-button style="background-color:blueviolet" data-toggle="modal" data-target="#cart" onclick="fn.load('OrderConfirmation.html')">Cart (<span class="total-count"></span>)</ons-button>
+                            <ons-button style="background-color:blueviolet" class="clear-cart btn btn-danger">Clear Cart</ons-button>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ข้าวเหนียวมะม่วง</h4>
+                                    <p class="card-text">Price: 60 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ข้าวเหนียวมะม่วง" data-price="60" class="add-to-cart btn btn-primary" onclick="addtocart()">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ทับทิมกรอบ</h4>
+                                    <p class="card-text">Price: 35 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ทับทิมกรอบ" data-price="35" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ลูกตาลลอยเเก้ว</h4>
+                                    <p class="card-text">Price: 35 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ลูกตาลลอยเเก้ว" data-price="35" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ลูกตาลนมสด</h4>
+                                    <p class="card-text">Price: 35 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ลูกตาลนมสด" data-price="35" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">กล้วยไข่เชื่อม</h4>
+                                    <p class="card-text">Price: 30 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="กล้วยไข่เชื่อม" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">กล้วยน้ำหว้าเชื่อม</h4>
+                                    <p class="card-text">Price: 30 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="กล้วยน้ำหว้าเชื่อม" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">บัวลอยธรรมดา</h4>
+                                    <p class="card-text">Price: 30 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="บัวลอยธรรมดา" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">บัวลอยไข่หวาน</h4>
+                                    <p class="card-text">Price: 40 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="บัวลอยไข่หวาน" data-price="40" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">สาคูเผือก</h4>
+                                    <p class="card-text">Price: 30 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="สาคูเผือก" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">สลิ่ม</h4>
+                                    <p class="card-text">Price: 30 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="สลิ่ม" data-price="30" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">โอ้เอ๋ว</h4>
+                                    <p class="card-text">Price: 35 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="โอ้เอ๋ว" data-price="35" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-container">
+                    <p style="text-align:center;margin-top:40px;opacity:0.4;">ที่อยู่ร้าน : 95 6-7 ม.2 ถ.ภูเก็ต ตำบลตลาดใหญ่อำเภอเมือง จังหวัดภูเก็ต 83000 Tel 092-6731-333 FB: หวานละมุนภูเก็ต</p>
+                    <br>
+                </div>
+            </ons-card>
+        </ons-col>
+    </ons-row>
+</ons-page>

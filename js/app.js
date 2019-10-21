@@ -17,8 +17,8 @@ var db = firebase.firestore();
 document.addEventListener('init', function(event) {
     var page = event.target;
     //codepalm
-    if (page.id === 'signup') {
-        console.log("signup");
+    if (page.id === 'Regispage') {
+        console.log("Regispage");
 
         $("#signupbtn").click(function() {
 
@@ -46,14 +46,15 @@ document.addEventListener('init', function(event) {
 
     }
 
-    if (page.id === 'loginPage') {
-        console.log("loginPage");
+    if (page.id === 'loginpage') {
+        console.log("loginpage");
 
         $("#gbtn").click(function() {
-            var auth_provider_x509_cert_url = new firebase.auth.GoogleAuthProvider();
-            firebase.auth_uri("https://accounts.google.com/o/oauth2/auth").signInWithPopup("https://www.googleapis.com/oauth2/v1/certs").then(function(result) {
+            console.log("aa");
+            var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(function(result) {
                 // This gives you a Google Access Token. You can use it to access the Google API.
-                var token_uri = result.credential.accessToken;
+                var token = result.credential.accessToken;
                 // The signed-in user info.
                 var user = result.user;
                 content.load('FoodCategory.html');
@@ -91,91 +92,64 @@ document.addEventListener('init', function(event) {
     }
 
 
-    //codeตัวเอง
+    // //codeตัวเอง
 
-    if (page.id === 'loginpage') {
-        function signIn() {
-            var email = document.getElementById('emailRegis').value;
-            var password = document.getElementById('passwordRegis').value;
-            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                if (errorCode === 'auth/wrong-password') {
-                    alert('Wrong password');
-                } else {
-                    alert(errorMessage);
-                }
-                console.log(error);
-            });
-            alert('logged in');
-        }
-    }
-
-
-    if (page.id === 'Regispage') {
-        function signUp() {
-            var email = document.getElementById('emailRegis').value;
-            var password = document.getElementById('passwordRegis').value;
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                if (errorCode === 'auth/weak-password') {
-                    alert('The password is too weak');
-                } else {
-                    alert(errorMessage);
-                }
-                console.log(error);
-            });
-        }
-    }
+    // if (page.id === 'loginpage') {
+    //     function signIn() {
+    //         var email = document.getElementById('emailRegis').value;
+    //         var password = document.getElementById('passwordRegis').value;
+    //         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
+    //             if (errorCode === 'auth/wrong-password') {
+    //                 alert('Wrong password');
+    //             } else {
+    //                 alert(errorMessage);
+    //             }
+    //             console.log(error);
+    //         });
+    //         alert('logged in');
+    //     }
+    // }
 
 
-    //codeAj
-
-
-    if (page.id === 'loginPage') {
-        console.log("loginPage");
-
-        $("#login").click(function() {
-            $("#content")[0].load("login.html");
-            $("#sidemenu")[0].close();
-        });
-
-        $("#home").click(function() {
-            $("#content")[0].load("FoodCategory.html");
-            $("#sidemenu")[0].close();
-        });
-    }
-
-    if (page.id === 'loginPage') {
-        console.log("loginPage");
-
-        $("#backhomebtn").click(function() {
-            $("#content")[0].load("FoodCategory.html");
-        });
-    }
-
+    // if (page.id === 'Regispage') {
+    //     function signUp() {
+    //         var email = document.getElementById('emailRegis').value;
+    //         var password = document.getElementById('passwordRegis').value;
+    //         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
+    //             if (errorCode === 'auth/weak-password') {
+    //                 alert('The password is too weak');
+    //             } else {
+    //                 alert(errorMessage);
+    //             }
+    //             console.log(error);
+    //         });
+    //     }
+    // }
 
 
     if (page.id === 'FoodCategorypage') {
         console.log("FoodCategorypage");
 
         $("#Sweetbtn").click(function() {
-            // localStorage.setItem("selectedCategory", "Sweet");
+
             $("#content")[0].load("ResturantList.html");
         });
 
         $("#Beveragebtn").click(function() {
-            // localStorage.setItem("selectedCategory", "Beverage");
-            $("#content")[0].load("ResturantList.html");
+
+            $("#content")[0].load("ResturantList1.html");
         });
 
         $("#fastfoodbtn").click(function() {
-            // localStorage.setItem("selectedCategory", "Fastfood");
+
             $("#content")[0].load("ResturantList.html");
         });
         $("#Japanesefoodbtn").click(function() {
-            // localStorage.setItem("selectedCategory", "Japanesefood");
+
             $("#content")[0].load("ResturantList.html");
         });
 
@@ -194,9 +168,9 @@ document.addEventListener('init', function(event) {
         $("#Thaifoodbtn").click(function() {
             $("#content")[0].load("ResturantList.html");
         });
-        $("#menubtn").click(function() {
-            $("#sidemenu")[0].open();
-        });
+        // $("#menubtn").click(function() {
+        //     $("#sidemenu")[0].open();
+        // });
 
 
 
@@ -214,42 +188,28 @@ document.addEventListener('init', function(event) {
     }
 
 
-    // if (page.id === 'categoryPage') {
-    //     var category = localStorage.getItem("selectedCategory");
-    //     console.log("categoryPage:" + category);
-
-    //     $("#header").html(category);
-
-    //     $("#menubtn").click(function() {
-    //         $("#sidemenu")[0].open();
-    //     });
-
-    //     $("#list").empty();
-    //     db.collection("resturantlist").where("category", "==", category).get()
-    //         .then((querySnapshot) => {
-    //             querySnapshot.forEach((doc) => {
-    //                 var item = `<ons-row class="category">
-    //             <ons-col modifier="nodivider">
-    //                 <div class="category_header" style="background-image: url('${doc.data().image}')">
-    //                     <figure class="category_thumbnail" id="Sweetbtn">
-    //                         <div class="category_title" id="Category_1_name">${doc.data().resturantname}</div>
-    //                     </figure>
-    //                 </div>
-    //             </ons-col>
-    //      </ons-row>`
-    //                 $("#list").append(item);
-    //                 console.log(doc.data().resturantname);
-
-    //             });
-    //         });
-
-    // }
 
     if (page.id === 'ResturantListpage') {
         console.log("ResturantListpage");
-        //ฟังก์ชันหน้าResturantlist
+        //ฟังก์ชันหน้าRประเภทของหวาน
         $("#rimbtn").click(function() {
             $("#content")[0].load("ResturantMenu.html");
+        });
+        $("#wanbtn").click(function() {
+            $("#content")[0].load("ResturantMenu1.html");
+        });
+
+    }
+
+    if (page.id === 'ResturantList1page') {
+        console.log("ResturantList1page");
+        //ฟังก์ชันประเภทเครื่องดื่ม
+
+        $("#chabtn").click(function() {
+            $("#content")[0].load("ResturantMenu2.html");
+        });
+        $("#inkbtn").click(function() {
+            $("#content")[0].load("ResturantMenu3.html");
         });
     }
 

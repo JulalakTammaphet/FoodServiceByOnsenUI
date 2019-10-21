@@ -14,7 +14,7 @@
                     </ons-input>
                 </p>
                 <p style="margin-top: 50px;">
-                    <ons-button id="signinbtn" onclick="fn.load('FoodCategory.html')">Sign in</ons-button>
+                    <ons-button id="signinbtn">Sign in</ons-button>
                 </p>
 
                 <p style="margin-top: 50px;">
@@ -27,17 +27,18 @@
                     <ons-row>
                         <ons-col>
 
-                            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
-                                <img src="img/ggsignin.png" alt="Onsen UI" style="width: 30%">
-                                <!-- id="gbtn" -->
-                            </div>
-                            <br> Result: <textarea id="result"></textarea>
+                            <ons-button id="gbtn" style="background-color: rgb(255, 0, 0); color: rgb(0, 0, 0); margin-top: 10px;">
+                                <b>Google</b>
+                            </ons-button>
+
+
                         </ons-col>
                     </ons-row>
                     <ons-row>
                         <ons-col>
-                            <img src="img/fbsignin.png" alt="Onsen UI" style="width: 30%">
-                        </ons-col>
+                            <ons-button id="googlebtn" style="background-color: rgb(21, 17, 223);color: rgb(0, 0, 0); margin-top: 10px;">
+                                <b>Facebook</b>
+                            </ons-button>
                     </ons-row>
                     <ons-row style="margin-top: 30px;color:navy">
                         <ons-col>
