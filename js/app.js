@@ -16,16 +16,19 @@ var db = firebase.firestore();
 
 document.addEventListener('init', function(event) {
     var page = event.target;
-    //codepalm
+
     if (page.id === 'Regispage') {
         console.log("Regispage");
 
         $("#signupbtn").click(function() {
 
-            var email = document.getElementById('email').value;
+            var email = document.getElementById('username').value;
             var password = document.getElementById('password').value;
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-                // Handle Errors here.
+            firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+                content.load('FoodCategory.html');
+            })
+
+            .catch(function(error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
 
@@ -34,13 +37,10 @@ document.addEventListener('init', function(event) {
 
                 } else {
                     alert(errorMessage);
-                    content.load('login.html');
+                    content.load('login1.html');
                 }
-                console.log(error);
 
             });
-
-
         });
 
 
@@ -49,8 +49,21 @@ document.addEventListener('init', function(event) {
     if (page.id === 'loginpage') {
         console.log("loginpage");
 
+        $("#signinbtn").click(function() {
+            var email = $("#email").val();
+            var password = $("#password").val();
+            firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+                    content.load('FoodCategory.html');
+                })
+                .catch(function(error) {
+
+                    console.log(error.message);
+                });
+
+        });
+
         $("#gbtn").click(function() {
-            console.log("aa");
+            console.log("gmail");
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function(result) {
                 // This gives you a Google Access Token. You can use it to access the Google API.
@@ -69,66 +82,9 @@ document.addEventListener('init', function(event) {
                 // ...
             });
         });
-
-        $("#signinbtn").click(function() {
-            var email = $("#email").val();
-            var password = $("#password").val();
-            firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-                content.load('home.html');
-
-            })
-
-            .catch(function(error) {
-
-                console.log(error.message);
-            });
-
-
-
-        });
-
-
-
     }
 
 
-    // //codeตัวเอง
-
-    // if (page.id === 'loginpage') {
-    //     function signIn() {
-    //         var email = document.getElementById('emailRegis').value;
-    //         var password = document.getElementById('passwordRegis').value;
-    //         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    //             var errorCode = error.code;
-    //             var errorMessage = error.message;
-    //             if (errorCode === 'auth/wrong-password') {
-    //                 alert('Wrong password');
-    //             } else {
-    //                 alert(errorMessage);
-    //             }
-    //             console.log(error);
-    //         });
-    //         alert('logged in');
-    //     }
-    // }
-
-
-    // if (page.id === 'Regispage') {
-    //     function signUp() {
-    //         var email = document.getElementById('emailRegis').value;
-    //         var password = document.getElementById('passwordRegis').value;
-    //         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-    //             var errorCode = error.code;
-    //             var errorMessage = error.message;
-    //             if (errorCode === 'auth/weak-password') {
-    //                 alert('The password is too weak');
-    //             } else {
-    //                 alert(errorMessage);
-    //             }
-    //             console.log(error);
-    //         });
-    //     }
-    // }
 
 
     if (page.id === 'FoodCategorypage') {
