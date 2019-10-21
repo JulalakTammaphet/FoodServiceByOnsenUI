@@ -1,53 +1,73 @@
 <ons-page id="loginpage">
-    <div style="text-align: center; margin-top: 30px;">
-        <img src="img/FS.png" alt="Onsen UI" style="width: 60%">
-        <div class="title" style="text-align: center;">
-            <h3>Sign in</h3>
-        </div>
-        <div class="content">
-            <div style="text-align: center; margin-top: 30px;">
-                <p>
-                    <ons-input id="email" modifier="underbar" placeholder="email" style="width: 30%"></ons-input>
-                </p>
-                <p>
-                    <ons-input id="password" modifier="underbar" type="password" placeholder="Password" style="width: 30%">
-                    </ons-input>
-                </p>
-                <p style="margin-top: 50px;">
-                    <ons-button id="signinbtn">Sign in</ons-button>
-                </p>
+    <div class="container">
 
-                <p style="margin-top: 50px;">
-                    <ons-button id="signupbtn" onclick="fn.load('Register.html')">Sign Up</ons-button>
-                </p>
+        <div class="dialog" style="width: 50%">
+            <div class="dialog-container">
+                <div style="text-align: center; margin-top: 30px;">
+                    <img src="img/FS.png" width=" 100 " height="100 ">
+                    <div class="title" style="text-align: center;">
+                        <h3>Sign in</h3>
+                    </div>
+                    <div class="content">
+                        <div style="text-align: center; margin-top: 30px;">
+                            <p>
+                                <ons-input id="email" modifier="underbar" placeholder="Email" style="width: 50%"></ons-input>
+                            </p>
+                            <p>
+                                <ons-input id="password" modifier="underbar" type="password" placeholder="Password" style="width: 50%">
+                                </ons-input>
+                            </p>
+
+                            <ons-row>
+                                <ons-col>
+                                    <p style="margin-top: 10px">
+                                        <ons-button id="signinbtn" style="width: 50%">Sign in</ons-button>
+                                    </p>
+
+                                </ons-col>
+                            </ons-row>
+
+                            <ons-row>
+                                <ons-col>
+                                    <p style="margin-top: 10px">
+                                        <ons-button id="signupbtn" onclick="fn.load('Register.html')" style="width: 50%">Sign Up</ons-button>
+                                    </p>
+                                </ons-col>
+                            </ons-row>
 
 
-                <p style="margin-top: 30px;color: blue">
-                    <h4>Or sign in with</h4>
-                    <ons-row>
-                        <ons-col>
+                            <p style="margin-top: 30px;color: blue">
+                                <h4>Or sign in with</h4>
+                            </p>
+                            <ons-row>
+                                <ons-col>
 
-                            <ons-button id="gbtn" style="background-color: rgb(255, 0, 0); color: rgb(0, 0, 0); margin-top: 10px;">
-                                <b>Google</b>
-                            </ons-button>
+                                    <ons-button id="gbtn" style="background-color: rgb(255, 0, 0); color: rgb(0, 0, 0); margin-top: 10px; width: 50%">
+                                        <b>Google</b>
+                                    </ons-button>
 
 
-                        </ons-col>
-                    </ons-row>
-                    <ons-row>
-                        <ons-col>
-                            <ons-button id="googlebtn" style="background-color: rgb(21, 17, 223);color: rgb(0, 0, 0); margin-top: 10px;">
-                                <b>Facebook</b>
-                            </ons-button>
-                    </ons-row>
-                    <ons-row style="margin-top: 30px;color:navy">
-                        <ons-col>
-                            <div id="backhomebtn" onclick="fn.load('FoodCategory.html')">
-                                <ons-icon icon="fa-arrow-left"></ons-icon> Back to Homepage</div>
-                        </ons-col>
-                    </ons-row>
-                </p>
+                                </ons-col>
+                            </ons-row>
+                            <ons-row>
+                                <ons-col>
+                                    <ons-button id="fbbtn" style="background-color: rgb(21, 17, 223);color: rgb(0, 0, 0); margin-top: 10px; width: 50%;">
+                                        <b>Facebook</b>
+                                    </ons-button>
+                            </ons-row>
+                            <ons-row style="margin-top: 30px;color:navy">
+                                <ons-col>
+                                    <div id="backhomebtn" onclick="fn.load('FoodCategory.html')">
+                                        <ons-icon icon="fa-arrow-left"></ons-icon> Back to Homepage</div>
+                                </ons-col>
+                            </ons-row>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
+
     </div>
 </ons-page>
