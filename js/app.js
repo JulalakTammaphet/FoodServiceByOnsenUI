@@ -153,16 +153,20 @@ document.addEventListener('init', function(event) {
             $("#content")[0].load("ResturantList1.html");
         });
 
+        $("#Seafoodbtn").click(function() {
+            $("#content")[0].load("ResturantList2.html");
+        });
+
+        $("#Thaifoodbtn").click(function() {
+            $("#content")[0].load("ResturantList3.html");
+        });
+
         $("#fastfoodbtn").click(function() {
 
             $("#content")[0].load("ResturantList.html");
         });
         $("#Japanesefoodbtn").click(function() {
 
-            $("#content")[0].load("ResturantList.html");
-        });
-
-        $("#Seafoodbtn").click(function() {
             $("#content")[0].load("ResturantList.html");
         });
 
@@ -174,13 +178,29 @@ document.addEventListener('init', function(event) {
             $("#content")[0].load("ResturantList.html");
         });
 
-        $("#Thaifoodbtn").click(function() {
-            $("#content")[0].load("ResturantList.html");
-        });
+
         // $("#menubtn").click(function() {
         //     $("#sidemenu")[0].open();
         // });
 
+        $("#rec1").click(function() {
+            $("#content")[0].load("ResturantMenu.html");
+        });
+        $("#rec2").click(function() {
+            $("#content")[0].load("ResturantMenu1.html");
+        });
+        $("#rec3").click(function() {
+            $("#content")[0].load("ResturantMenu3.html");
+        });
+        $("#rec4").click(function() {
+            $("#content")[0].load("ResturantMenu2.html");
+        });
+        $("#rec5").click(function() {
+            $("#content")[0].load("ResturantMenu6.html");
+        });
+        $("#rec6").click(function() {
+            $("#content")[0].load("ResturantMenu7.html");
+        });
 
 
         $("#carousel").empty();
@@ -221,6 +241,31 @@ document.addEventListener('init', function(event) {
             $("#content")[0].load("ResturantMenu3.html");
         });
     }
+
+    if (page.id === 'ResturantList2page') {
+        console.log("ResturantList2page");
+        //ฟังก์ชันประเภทซีฟู้ด
+
+        $("#palaybtn").click(function() {
+            $("#content")[0].load("ResturantMenu4.html");
+        });
+        $("#salabtn").click(function() {
+            $("#content")[0].load("ResturantMenu5.html");
+        });
+    }
+
+    if (page.id === 'ResturantList3page') {
+        console.log("ResturantList2page");
+        //ฟังก์ชันประเภทอาหารไทย
+
+        $("#kittibtn").click(function() {
+            $("#content")[0].load("ResturantMenu6.html");
+        });
+        $("#cobenbtn").click(function() {
+            $("#content")[0].load("ResturantMenu7.html");
+        });
+    }
+
 
 
     // ************************************************

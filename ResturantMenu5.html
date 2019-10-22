@@ -1,0 +1,95 @@
+<ons-page id="ResturantMenu5page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button>
+                <ons-icon icon="fa-arrow-left" onclick="fn.load('ResturantList2.html')">Back</ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">FOOD SERVICE</div>
+        <div class="right">
+            <ons-toolbar-button>
+                <ons-icon icon="md-home" onclick="fn.load('FoodCategory.html')"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <ons-row class="row justify-content-center">
+
+        <ons-col>
+            <p style="text-align: center"><b>ศาลาลอยซีฟู้ด</b></p>
+
+
+            <ons-card style="width: 99%">
+
+                <!-- Nav-->
+                <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+                    <div class="row">
+                        <div class="col">
+                            <ons-button style="background-color:blueviolet" data-toggle="modal" data-target="#cart" onclick="fn.load('OrderConfirmation.html')">Cart (<span class="total-count"></span>)</ons-button>
+                            <ons-button style="background-color:blueviolet" class="clear-cart btn btn-danger">Clear Cart</ons-button>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ปลานึ่งมะนาว (ราคาต่อ100กรัม)</h4>
+                                    <p class="card-text">Price: 65 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ปลานึ่งมะนาว (ราคาต่อ100กรัม)" data-price="65" class="add-to-cart btn btn-primary" onclick="addtocart()">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ปลาเผาเกลือ (ราคาต่อ100กรัม)</h4>
+                                    <p class="card-text">Price: 55 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ปลาเผาเกลือ (ราคาต่อ100กรัม)" data-price="55" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ปูม้านึ่ง/เผา (ราคาต่อ100กรัม)</h4>
+                                    <p class="card-text">Price: 70 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ปูม้านึ่ง/เผา (ราคาต่อ100กรัม)" data-price="70" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">หมึกไข่นึ่งมะนาว</h4>
+                                    <p class="card-text">Price: 240 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="หมึกไข่นึ่งมะนาว" data-price="240" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 100%;">
+
+                                <div class="card-block">
+                                    <h4 class="card-title">ยำไข่เเมงดาทะเล</h4>
+                                    <p class="card-text">Price: 390 ฿</p>
+                                    <ons-button style="background-color:blueviolet"><a data-name="ยำไข่เเมงดาทะเล" data-price="390" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="dialog-container">
+                    <p style="text-align:center;margin-top:40px;opacity:0.4;">ที่อยู่ร้าน : 52/2 ม.2 ถ.วิเศษ ตำบลราไวย์ อำเภอเมืองภูเก็ต จังหวัดภูเก็ต 83130 Tel 076-613-740 FB : ศาลาลอยซีฟู้ด Salaloy Seafood</p>
+                    <br>
+                </div>
+            </ons-card>
+        </ons-col>
+    </ons-row>
+</ons-page>
